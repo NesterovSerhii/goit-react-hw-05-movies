@@ -51,11 +51,11 @@ const Movies = () => {
         value={searchMovie}
         onChange={(e) => setSearchMovie(e.target.value)}
       />
-      <button className={styled.searchButton} onClick={() => handleSubmitSearchMovie(searchMovie)}>Search</button>
+      <button className={styled.btn} onClick={() => handleSubmitSearchMovie(searchMovie)}>Search</button>
       {searchPerformed && searchResults.length > 0 ? (
         <div className={styled.resultsContainer}>
           <h2>Search Results</h2>
-            <button className={styled.goBackButton}  onClick={onGoBackClick}>Go Back</button>
+            <button className={styled.btn}  onClick={onGoBackClick}>Go Back</button>
           <ul className={styled.resultsList}>
             {searchResults.map((movie) => (
               <li className={styled.resultsListItem} key={movie.id}>

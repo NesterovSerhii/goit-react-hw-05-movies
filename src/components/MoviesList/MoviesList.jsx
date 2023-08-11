@@ -18,7 +18,7 @@ const MoviesList = () => {
         <div>
             {error && <div>{error}</div>}
 
-            <h1>Trending Movies</h1>
+            <h1>Trending Today</h1>
             <ul>
                 {movies.map((movie) => (
                     <li key={movie.id}>

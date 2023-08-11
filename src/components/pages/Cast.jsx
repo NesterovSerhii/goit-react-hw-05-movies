@@ -25,7 +25,7 @@ const Cast = ({movieId}) => {
   }
 
   return (
-    <div>
+    <div className={styled.castContainer}>
       <h2>Cast</h2>
        {error ? (
         <p className={styled.error}>Error: {error}</p>
