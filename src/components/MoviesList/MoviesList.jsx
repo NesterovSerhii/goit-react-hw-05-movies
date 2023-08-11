@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getTrendingMovies } from "api/api";
 import { NavLink } from "react-router-dom";
+import styled from './MovieList.module.css'
 
 const MoviesList = () => {
 
@@ -15,14 +16,14 @@ const MoviesList = () => {
       });
   }, []);
     return (
-        <div>
+        <div className={styled.moviesListContainer}>
             {error && <div>{error}</div>}
 
             <h1>Trending Today</h1>
-            <ul>
+            <ul className={styled.movieList}>
                 {movies.map((movie) => (
-                    <li key={movie.id}>
-                        <NavLink to={`/movies/${movie.id}`}>{movie.title ? movie.title : movie.name}</NavLink>
+                    <li className={styled.movieItem} key={movie.id}>
+                        <NavLink className={styled.movieLink} to={`/movies/${movie.id}`}>{movie.title ? movie.title : movie.name}</NavLink>
                     </li>
                 ))}
             </ul>
